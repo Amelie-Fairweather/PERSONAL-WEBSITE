@@ -313,7 +313,8 @@ export default function Home() {
       </div>
       </div>
      
-       <div className="mb-30"></div>
+       <div className="mb-30
+       "></div>
 
       {/* BITS N PIECES */}
       
