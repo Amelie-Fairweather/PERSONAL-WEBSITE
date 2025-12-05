@@ -246,17 +246,18 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="w-full">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 bg-[var(--mauveDeep)] px-4 md:px-8 lg:px-60 py-10 md:py-0" style={{
+      <div className="">
+      <div className="flex items-center space-x-6 bg-[var(--mauveDeep)] px-4 md:px-15rem" style={{
   transform: `translateY(-${offsetY * 0.3}px)`,
   opacity: Math.max(1 - offsetY / 600, 0), // fades out after scrolling ~600px
-  minHeight: "400px",
-  height: "auto",
+  height: "610px",           // explicit height
+    paddingLeft: "15rem",      // optional horizontal padding
+    paddingRight: "15rem",
 }}
         
         >
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[var(--offWhite)] hover:text-[var(--roseSoft)] text-shadow font-playfair">Hi!</h1>
-        <p className="text-[var(--roseSoft)] text-sm md:text-base lg:text-lg font-bold text-center md:text-left">
+        <h1 className="text-8xl font-bold pr-1 text-[var(--offWhite)] hover:text-[var(--roseSoft)] text-shadow font-playfair">Hi!</h1>
+        <p className="text-[var(--roseSoft)] text-lg font-bold">
           welcome to my website, I am so excited to introduce myself
         </p>
         <Image 
@@ -265,7 +266,7 @@ export default function Home() {
           width={350}
           height={350}
             quality={100}
-          className="rounded-full border-4 md:border-10 border-[var(--offWhite)] object-cover w-48 h-48 md:w-64 md:h-64 lg:w-[350px] lg:h-[350px]"
+          className="rounded-full border-10 border-[var(--offWhite)] object-cover"
         />
       </div>
 
