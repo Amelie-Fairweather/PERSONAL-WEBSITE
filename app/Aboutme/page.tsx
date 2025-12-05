@@ -47,25 +47,25 @@ export default function AboutmePage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[var(--offWhite)] font-sans">
       {/* Navigation */}
-      <div className="flex items-center space-x-20 pt-10">
-        <Link href="/" className="font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 lg:gap-20 px-4 pt-10">
+        <Link href="/" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           HOME
         </Link>
-        <Link href="/Aboutme" className="font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
+        <Link href="/Aboutme" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           ABOUT ME
         </Link>
-        <Link href="/Currently" className="font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
+        <Link href="/Currently" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           CURRENTLY
         </Link>
-        <Link href="/Pastwork" className="font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
+        <Link href="/Pastwork" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           PAST WORK
         </Link>
       </div>
 
       {/* Main Content */}
-      <div className="w-full max-w-4xl mx-auto px-6 py-20">
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-6 py-10 md:py-20">
         {/* Image Section */}
-        <div className="flex justify-center mb-16 relative">
+        <div className="flex justify-center mb-10 md:mb-16 relative">
           {/* Stars around the image */}
           <div className="absolute -top-4 -left-4 text-[var(--mauveDeep)] text-3xl">★</div>
           <div className="absolute -top-2 -right-8 text-[var(--mauveDeep)] text-2xl">★</div>
@@ -78,7 +78,7 @@ export default function AboutmePage() {
           <div className="absolute top-1/3 -left-10 text-[var(--mauveDeep)] text-xl">★</div>
           <div className="absolute bottom-1/3 -right-10 text-[var(--mauveDeep)] text-xl">★</div>
           
-          <div className="w-80 h-96 rounded-[50%] border-4 border-[var(--mauveDeep)] overflow-hidden shadow-lg" style={{ borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%' }}>
+          <div className="w-64 h-80 md:w-80 md:h-96 rounded-[50%] border-4 border-[var(--mauveDeep)] overflow-hidden shadow-lg" style={{ borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%' }}>
             <Image 
               src="/prof.jpeg"
               alt="Amelie Fairweather"
@@ -96,14 +96,14 @@ export default function AboutmePage() {
           opacity: isVisible ? 1 : 0,
           transition: 'opacity 1s ease-out, transform 1s ease-out',
         }}>
-          <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-[var(--burgundyDark)] font-playfair mb-4">
+          <div className="text-center mb-6 md:mb-8 lg:mb-12">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--burgundyDark)] font-playfair mb-4">
               About Me
             </h1>
             <div className="w-24 h-1 bg-[var(--mauveDeep)] mx-auto"></div>
           </div>
 
-          <div className="space-y-6 text-[var(--burgundyDark)] font-playfair text-lg leading-relaxed">
+          <div className="space-y-4 md:space-y-6 text-[var(--burgundyDark)] font-playfair text-base md:text-lg leading-relaxed px-2">
             <p>
               Hi! My name is <span className="font-bold text-[var(--mauveDeep)]">Amelie Fairweather</span>, and I am a junior living in Vermont. Growing up, I lived in a lot of different places, most notably three years in Istanbul, Turkey, where I attended public school and learned to speak Turkish fluently.
             </p>

@@ -39,8 +39,8 @@ function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-6 py-10">
-      <div className="bg-[var(--offWhite2)] rounded-lg shadow-lg p-8">
+    <div className="w-full max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-10">
+      <div className="bg-[var(--offWhite2)] rounded-lg shadow-lg p-4 md:p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-[var(--mauveDeep)] font-playfair font-bold mb-2">
@@ -231,33 +231,32 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-[var(--offWhite)] font-sans dark:bg-black">
  
       {/* Navigation */}
-      <div className="flex items-center space-x-20">
-        <Link href="/Aboutme" className=" font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] ">
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 lg:gap-20 px-4">
+        <Link href="/Aboutme" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           ABOUT ME
         </Link>
 
-        <Link href="/Currently" className="font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] ">
+        <Link href="/Currently" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           CURRENTLY
         </Link>
 
-        <Link href="/Pastwork" className="font-playfair text-xl font-bold pb-20 pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] ">
+        <Link href="/Pastwork" className="font-playfair text-base md:text-xl font-bold pb-10 md:pb-20 pt-10 md:pt-20 text-[var(--mauveDeep)] hover:text-[var(--roseSoft)]">
           PAST WORK
         </Link>
       </div>
 
       {/* Hero */}
-      <div className="">
-      <div className="flex items-center space-x-6 bg-[var(--mauveDeep)]  " style={{
+      <div className="w-full">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 bg-[var(--mauveDeep)] px-4 md:px-8 lg:px-60 py-10 md:py-0" style={{
   transform: `translateY(-${offsetY * 0.3}px)`,
   opacity: Math.max(1 - offsetY / 600, 0), // fades out after scrolling ~600px
-  height: "610px",           // explicit height
-    paddingLeft: "15rem",      // optional horizontal padding
-    paddingRight: "15rem",
+  minHeight: "400px",
+  height: "auto",
 }}
         
         >
-        <h1 className="text-8xl font-bold pr-1 text-[var(--offWhite)] hover:text-[var(--roseSoft)] text-shadow font-playfair "   >Hi!</h1>
-        <p className="text-[var(--roseSoft)] text-lg font-bold">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[var(--offWhite)] hover:text-[var(--roseSoft)] text-shadow font-playfair">Hi!</h1>
+        <p className="text-[var(--roseSoft)] text-sm md:text-base lg:text-lg font-bold text-center md:text-left">
           welcome to my website, I am so excited to introduce myself
         </p>
         <Image 
@@ -266,27 +265,27 @@ export default function Home() {
           width={350}
           height={350}
             quality={100}
-          className="rounded-full border-10 border-[var(--offWhite)] object-cover"
+          className="rounded-full border-4 md:border-10 border-[var(--offWhite)] object-cover w-48 h-48 md:w-64 md:h-64 lg:w-[350px] lg:h-[350px]"
         />
       </div>
 
       {/* Introduction */}
-      <p className="text-[var(--burgundyDark)] text-2xl pt-20 text-center" >
+      <p className="text-[var(--burgundyDark)] text-lg md:text-xl lg:text-2xl pt-10 md:pt-20 px-4 text-center max-w-4xl mx-auto" >
         My name is <span className="font-bold font-playfair">Amelie Fairweather</span>, I am a junior currently, and living in Vermont!
       </p>
         <div className="mb-25"></div>
         </div>
 
       {/* Values */}
-      <div className="flex flex-col items-center relative">
-        <h1 className="text-[var(--burgundyDark)] text-4xl font-bold pt-20 pb-15 font-playfair text-center">MY VALUES</h1>
+      <div className="flex flex-col items-center w-full px-4 relative">
+        <h1 className="text-[var(--burgundyDark)] text-2xl md:text-3xl lg:text-4xl font-bold pt-10 md:pt-20 pb-8 md:pb-15 font-playfair text-center">MY VALUES</h1>
       
-        <div className="flex flex-wrap gap-16 p-10 justify-center relative">
+        <div className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-12 lg:gap-16 p-4 md:p-10 justify-center w-full max-w-6xl relative">
           {/* Scattered stars around the entire section */}
           <div className="absolute -top-6 left-8 text-[var(--mauveDeep)] text-2xl">★</div>
           <div className="absolute -bottom-6 right-16 text-[var(--burgundyDark)] text-2xl">★</div>
     
-          <div className="rounded-md bg-[var(--mauveLight)] p-8 shadow-lg hover:scale-110 transition-transform duration-300 ease-out flex-1 w-150 relative max-w-sm">
+          <div className="rounded-md bg-[var(--mauveLight)] p-6 md:p-8 shadow-lg hover:scale-110 transition-transform duration-300 ease-out w-full md:flex-1 relative max-w-sm">
             {/* Scattered stars around CURIOSITY box */}
             <div className="absolute -top-4 -left-6 text-[var(--mauveDeep)] text-xl">★</div>
             <div className="absolute -bottom-4 -left-7 text-[var(--burgundyDark)] text-lg">★</div>
@@ -294,7 +293,7 @@ export default function Home() {
             <p className="font-playfair text-[var(--superSoft)] font-bold ">Curiosity fuels growth. Asking questions, exploring new ideas, and challenging what we know opens doors to knowledge and creativity that we might never have discovered otherwise.</p>
           </div>
 
-          <div className="rounded-md bg-[var(--mauveLight)] p-8 shadow-lg hover:scale-110 transition-transform duration-300 ease-out flex-1 w-64 min-h-[300px] relative max-w-sm">
+          <div className="rounded-md bg-[var(--mauveLight)] p-6 md:p-8 shadow-lg hover:scale-110 transition-transform duration-300 ease-out w-full md:flex-1 md:w-64 min-h-[250px] md:min-h-[300px] relative max-w-sm">
             {/* Scattered stars around HONESTY box */}
             <div className="absolute -top-5 -left-5 text-[var(--burgundyDark)] text-xl">★</div>
             <div className="absolute -bottom-5 -right-6 text-[var(--mauveDeep)] text-xl">★</div>
@@ -302,7 +301,7 @@ export default function Home() {
             <p className="font-playfair text-[var(--superSoft)] font-bold">Honesty is more than telling the truth—it's about integrity in actions and words. Being honest fosters trust, strengthens character, and creates an environment where people feel safe and valued.</p>
           </div>
 
-          <div className="rounded-md bg-[var(--mauveLight)] p-8 shadow-lg hover:scale-110 transition-transform duration-300 ease-out flex-1 w-64 min-h-[300px] relative max-w-sm">
+          <div className="rounded-md bg-[var(--mauveLight)] p-6 md:p-8 shadow-lg hover:scale-110 transition-transform duration-300 ease-out w-full md:flex-1 md:w-64 min-h-[250px] md:min-h-[300px] relative max-w-sm">
             {/* Scattered stars around RESPECT box */}
             <div className="absolute -top-4 -right-6 text-[var(--burgundyDark)] text-xl">★</div>
             <div className="absolute -bottom-3 -left-8 text-[var(--mauveDeep)] text-xl">★</div>
@@ -318,8 +317,8 @@ export default function Home() {
 
       {/* BITS N PIECES */}
       
-      <h1 className="text-4xl text-[var(--burgundyDark)] font-bold pb-10 font-playfair ">BITS N PIECES</h1>
-      <div className="px-4 grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center hover:border-[var(--roseSoft)] hover:scale-105 transition-all duration-500">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl text-[var(--burgundyDark)] font-bold pb-6 md:pb-10 font-playfair text-center px-4">BITS N PIECES</h1>
+      <div className="px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 justify-items-center max-w-4xl mx-auto">
         
         
         {photos.map((photo, index) => (
@@ -335,77 +334,79 @@ export default function Home() {
       <div className="mb-20"></div>
        
    
- <div ref={sectionRef} className=" w-full pt-5 pb-10" style={{
+ <div ref={sectionRef} className="w-full pt-5 pb-10 px-4" style={{
   transform: `translateY(${isVisible ? Math.max(0, Math.min(50, (offsetY - 600) * 0.1)) : 80}px)`,
   opacity: isVisible ? 1 : 0,
   transition: 'opacity 1.2s ease-out, transform 1.2s ease-out',
 }}>
-  <div className="max-w-[1200px] mx-auto px-6 flex items-start space-x-6"  >
-    <h1 className="font-bold text-4xl text-[var(--mauveDeep)]">
+  <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start gap-4 md:gap-6"  >
+    <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-[var(--mauveDeep)]">
       INTERESTED IN A WEBSITE LIKE THIS?
     </h1>
-    <p className=" font-playfair text-lg text-[var(--mauveDeep)] mt-1">
+    <p className="font-playfair text-base md:text-lg text-[var(--mauveDeep)] mt-1">
      I offer my services as your towns local design and software engineer, for affordable prices to bring your ideas to life! 
     </p>
   </div>
-  <h1 className=" text-center text-2xl pt-10 pb-10 text-[var(--mauveDeep)]"> I guarentee<span className="font-bold"> Functionality, Design and Deployement</span></h1>
+  <h1 className="text-center text-lg md:text-xl lg:text-2xl pt-6 md:pt-10 pb-6 md:pb-10 px-4 text-[var(--mauveDeep)]"> I guarentee<span className="font-bold"> Functionality, Design and Deployement</span></h1>
  </div>
-<div ref={workSectionRef} className="bg-[var(--mauveLight)] px-30 md:px-55" style={{
+<div ref={workSectionRef} className="bg-[var(--mauveLight)] px-4 md:px-8 lg:px-30" style={{
   transform: `translateY(${isWorkVisible ? Math.max(0, Math.min(30, (offsetY - 1000) * 0.05)) : 60}px)`,
   opacity: isWorkVisible ? 1 : 0,
   transition: 'opacity 1s ease-out, transform 1s ease-out',
 }}>
-  <h1 className="bg-[var(--mauveLight)] text-center text-2xl pt-15 pb-20 font-bold text-[var(--offWhite3)] font-playfair">SOME OF MY WORK</h1>
+  <div className="bg-[var(--mauveLight)] text-center pt-10 md:pt-15 pb-10 md:pb-20 relative">
+    <h1 className="text-xl md:text-2xl font-bold text-[var(--offWhite3)] font-playfair mb-3 px-4">SOME OF MY WORK</h1>
+    <div className="inline-block bg-[var(--mauveDeep)] text-[var(--offWhite)] font-playfair font-bold px-4 md:px-6 py-2 rounded-full text-xs md:text-sm mx-4">
+      🏆 Winner of the 2025 Congressional App Challenge
+    </div>
+  </div>
     
   
  
   
 
-  <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
-<div className="bg-[var(--roseSoft)] p-6 rounded-lg opacity-80">
+  <div className="grid md:grid-cols-2 grid-cols-1 gap-6 md:gap-10">
+<div className="bg-[var(--roseSoft)] p-4 md:p-6 rounded-lg opacity-80">
     {/* LEFT COLUMN */}
-    <div className="grid grid-cols-2 gap-4 justify-items-center">
+    <div className="grid grid-cols-2 gap-3 md:gap-4 justify-items-center">
      
       {photos2.map((photo, index) => (
         <img
           key={index}
           src={photo}
           alt={`Photo ${index + 1}`}
-          className="w-60 h-60 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+          className="w-full max-w-[140px] md:max-w-[180px] lg:max-w-[240px] h-auto aspect-square object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
         />
       ))}
     </div>
 </div>
-<div className="bg-[var(--roseSoft)] p-6 rounded-lg opacity-80">
+<div className="bg-[var(--roseSoft)] p-4 md:p-6 rounded-lg opacity-80">
     {/* RIGHT COLUMN */}
-    <div className="grid grid-cols-2 gap-4 justify-items-center">
+    <div className="grid grid-cols-2 gap-3 md:gap-4 justify-items-center">
       {photos3.map((photo, index) => (
         <img
           key={index}
           src={photo}
           alt={`Photo ${index + 1}`}
-          className="w-60 h-60 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+          className="w-full max-w-[140px] md:max-w-[180px] lg:max-w-[240px] h-auto aspect-square object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
         />
       ))}
     </div>
     </div>
     </div>
-    <div className="max-w-[1200px] mx-auto px-6 flex items-start pt-10 space-x-6">
+    <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 pt-6 md:pt-10 pb-6 md:pb-10">
      <Link
   href="https://hereducation.org"
   target="_blank"
-  className="text-xl pl-35 pr-40 pb-10 font-playfair text-[var(--mauveDeep)] ">
- 
-   
-
-    <h1 className=" text-xl  font-playfair bg-white rounded-full text-[var(--mauveDeep)]  hover:text-[var(--roseSoft)] p-8"> Hereducation.org</h1>
+  className="font-playfair text-[var(--mauveDeep)]">
+    <h1 className="text-base md:text-lg lg:text-xl font-playfair bg-white rounded-full text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] px-6 py-4 md:px-8 md:py-8 text-center">Hereducation.org</h1>
      </Link>
 
  <Link
   href="https://ridesforyou.org"
   target="_blank"
-  className="text-lg pl-35 pr-40 pb-10  font-playfair text-[var(--mauveDeep)] ">
- <h1 className="text-xl  font-playfair bg-white rounded-full text-[var(--mauveDeep)]  hover:text-[var(--roseSoft)] p-8">Ridesforyou.org</h1>
+  className="font-playfair text-[var(--mauveDeep)]">
+ <h1 className="text-base md:text-lg lg:text-xl font-playfair bg-white rounded-full text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] px-6 py-4 md:px-8 md:py-8 text-center">Ridesforyou.org</h1>
     </Link>
        </div>
   <div className="mb-15"></div>
@@ -415,8 +416,8 @@ export default function Home() {
     </div>
 
   
-<h1 className="pt-25 text-center text-8xl rouge-script text-[var(--burgundyDark)] ">Your website is art</h1>
-<h3 className="pt-5 text-xl  text-center font-playfair text-[var(--mauveDeep)]">Lets work together!</h3>
+<h1 className="pt-10 md:pt-25 text-center text-4xl md:text-6xl lg:text-8xl rouge-script text-[var(--burgundyDark)] px-4">Your website is art</h1>
+<h3 className="pt-3 md:pt-5 text-lg md:text-xl text-center font-playfair text-[var(--mauveDeep)] px-4">Lets work together!</h3>
 
 <ContactForm />
 
