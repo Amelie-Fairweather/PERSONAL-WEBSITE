@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Airtable from 'airtable';
 
+export const runtime = 'nodejs';
+
 export async function POST(request: NextRequest) {
   try {
     // Check if environment variables are set
