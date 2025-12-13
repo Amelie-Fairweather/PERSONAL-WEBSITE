@@ -394,22 +394,34 @@ export default function Home() {
       ))}
     </div>
     </div>
-    </div>
-    <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 pt-6 md:pt-10 pb-6 md:pb-10">
-     <Link
-  href="https://hereducation.org"
-  target="_blank"
-  className="font-playfair text-[var(--mauveDeep)]">
-    <h1 className="text-base md:text-lg lg:text-xl font-playfair bg-white rounded-full text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] px-6 py-4 md:px-8 md:py-8 text-center">Hereducation.org</h1>
-     </Link>
+    
+   
+  <Link
+    href="https://hereducation.org"
+    target="_blank"
+    className="font-playfair text-[var(--mauveDeep)]">
+    <h1 className="text-base md:text-lg lg:text-xl font-playfair 
+        bg-white rounded-full text-[var(--mauveDeep)] 
+        hover:text-[var(--roseSoft)] px-2 py-4 md:px-8 md:py-8 
+        text-center">
+      Hereducation.org
+    </h1>
+  </Link>
 
- <Link
-  href="https://ridesforyou.org"
-  target="_blank"
-  className="font-playfair text-[var(--mauveDeep)]">
- <h1 className="text-base md:text-lg lg:text-xl font-playfair bg-white rounded-full text-[var(--mauveDeep)] hover:text-[var(--roseSoft)] px-6 py-4 md:px-8 md:py-8 text-center">Ridesforyou.org</h1>
-    </Link>
-       </div>
+  <Link
+    href="https://ridesforyou.org"
+    target="_blank"
+    className="font-playfair text-[var(--mauveDeep)]">
+    <h1 className="text-base md:text-lg lg:text-xl font-playfair 
+        bg-white rounded-full text-[var(--mauveDeep)] 
+        hover:text-[var(--roseSoft)] px-2 py-4 md:px-8 md:py-8 
+        text-center">
+      Ridesforyou.org
+    </h1>
+  </Link>
+
+
+</div>
   <div className="mb-15"></div>
   
   
