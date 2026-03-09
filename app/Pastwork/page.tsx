@@ -16,6 +16,12 @@ const pastProjects = [
     description: "A community-driven ride-sharing service connecting people in need",
     image: "/web5.png",
     award: "Winner of the 2025 Congressional App Challenge"
+  },
+  {
+    name: "WeatherBird",
+    url: "https://weather-bird.vercel.app",
+    description: "A Vermont weather service dedicated to improving road and flood safety",
+    image: "/web5.png",
   }
 ];
 

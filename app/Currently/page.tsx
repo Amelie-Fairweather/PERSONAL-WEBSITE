@@ -150,7 +150,7 @@ export default function CurrentlyPage() {
                   I have attended over 20 hackathons including ones at Duolingo, Google, Figma, YouTube, and cross-country trains as well as one in New Delhi, India, where I coded a study app that helped students focus before exams.
                 </p>
                 <p className="text-[var(--burgundyDark)] font-playfair text-base md:text-lg leading-relaxed">
-                  Recently, I was the <span className="font-bold text-[var(--mauveDeep)]">winner of the 2025 Congressional App Challenge</span> for my app Ride, which brought affordable transportation to isolated Vermonters. I am restarting my website building services in an attempt to build my portfolio and better my coding abilities.
+                  Recently, I was the <a href="https://www.congressionalappchallenge.us/25-VT00/" target="_blank" rel="noopener noreferrer" className="font-bold text-[var(--mauveDeep)] hover:text-[var(--burgundyDark)] underline">winner of the 2025 Congressional App Challenge</a> for my app Ride, which brought affordable transportation to isolated Vermonters. I am restarting my website building services in an attempt to build my portfolio and better my coding abilities.
                 </p>
               </div>
             </div>
