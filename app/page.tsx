@@ -357,8 +357,13 @@ export default function Home() {
 }}>
   <div className="bg-[var(--mauveLight)] text-center pt-10 md:pt-15 pb-10 md:pb-20 relative">
     <h1 className="text-xl md:text-2xl font-bold text-[var(--offWhite3)] font-playfair mb-3 px-4">SOME OF MY WORK</h1>
-    <div className="inline-block bg-[var(--mauveDeep)] text-[var(--offWhite)] font-playfair font-bold px-4 md:px-6 py-2 rounded-full text-xs md:text-sm mx-4">
-      🏆 Winner of the 2025 Congressional App Challenge
+    <div className="flex flex-col items-center gap-2 mb-4">
+      <div className="inline-block bg-[var(--mauveDeep)] text-[var(--offWhite)] font-playfair font-bold px-4 md:px-6 py-2 rounded-full text-xs md:text-sm mx-4">
+        🏆 Winner of the 2025 Congressional App Challenge
+      </div>
+      <div className="inline-block bg-[var(--mauveDeep)] text-[var(--offWhite)] font-playfair font-bold px-4 md:px-6 py-2 rounded-full text-xs md:text-sm mx-4">
+        🏆 VT state STEM fair gold medalist
+      </div>
     </div>
   </div>
     

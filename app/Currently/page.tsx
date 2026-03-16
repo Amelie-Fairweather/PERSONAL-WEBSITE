@@ -79,6 +79,24 @@ export default function CurrentlyPage() {
         </h1>
       </div>
 
+      {/* Resume Section */}
+      <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-20">
+        <div className="bg-[var(--offWhite2)] rounded-lg shadow-lg p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--burgundyDark)] text-center mb-4 font-playfair">
+            Resume
+          </h2>
+          <div className="flex justify-center">
+            <Link
+              href="/RESUME.pdf"
+              target="_blank"
+              className="inline-block bg-[var(--mauveDeep)] text-white font-playfair font-bold py-2 px-4 md:px-6 rounded-lg hover:bg-[var(--burgundyDark)] transition-colors duration-300 text-sm md:text-base"
+            >
+              View Resume PDF →
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Content Section */}
       <div ref={sectionRef} className="w-full max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-20" style={{
         transform: `translateY(${isVisible ? Math.max(0, Math.min(30, (offsetY - 300) * 0.05)) : 60}px)`,

@@ -22,6 +22,10 @@ const pastProjects = [
     url: "https://weather-bird.vercel.app",
     description: "A Vermont weather service dedicated to improving road and flood safety",
     image: "/web5.png",
+    awards: [
+      "Winner of VT state STEM fair",
+      "Winner of the women's society of engineers award"
+    ]
   }
 ];
 
@@ -119,6 +123,7 @@ export default function PastworkPage() {
         </h1>
       </div>
 
+
       {/* Featured Projects */}
       <div ref={sectionRef} className="w-full max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-20" style={{
         transform: `translateY(${isVisible ? Math.max(0, Math.min(30, (offsetY - 300) * 0.05)) : 60}px)`,
@@ -134,7 +139,7 @@ export default function PastworkPage() {
             <div 
               key={index} 
               className={`rounded-lg shadow-lg p-6 md:p-8 hover:scale-105 transition-transform duration-300 ${
-                project.award 
+                (project.award || project.awards) 
                   ? 'bg-gradient-to-br from-[var(--offWhite2)] to-[var(--offWhite3)] border-4 border-[var(--mauveDeep)]' 
                   : 'bg-[var(--offWhite2)]'
               }`}
@@ -145,7 +150,7 @@ export default function PastworkPage() {
                     <h3 className="text-xl md:text-2xl font-bold text-[var(--mauveDeep)] font-playfair">
                       {project.name}
                     </h3>
-                    {project.award && (
+                    {project.award && !project.awards && (
                       <span className="bg-[var(--mauveDeep)] text-[var(--offWhite)] font-playfair font-bold px-3 md:px-4 py-1 rounded-full text-xs md:text-sm">
                         🏆 {project.award}
                       </span>
@@ -154,6 +159,18 @@ export default function PastworkPage() {
                   <p className="text-[var(--burgundyDark)] font-playfair text-base md:text-lg mb-4">
                     {project.description}
                   </p>
+                  {project.awards && (
+                    <div className="flex flex-col gap-2 mb-4">
+                      {project.awards.map((award, awardIndex) => (
+                        <div 
+                          key={awardIndex}
+                          className="inline-block bg-[var(--mauveDeep)] text-[var(--offWhite)] font-playfair font-bold px-4 md:px-6 py-2 rounded-full text-xs md:text-sm w-fit"
+                        >
+                          🏆 {award}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <Link
                     href={project.url}
                     target="_blank"
